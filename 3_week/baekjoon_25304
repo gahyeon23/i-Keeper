@@ -1,0 +1,15 @@
+#include <stdio.h>
+int main(){
+    int i,X,N,a,b,s=0;  // 총 금액 X, 종류 수 N, 가격a, 개수b
+    scanf("%d",&X);
+    scanf("%d",&N);
+    for(i=1;i<=N;i++){
+    scanf("%d %d",&a,&b);
+    s+=a*b;
+    }
+    if(X==s)
+        printf("Yes");
+    else
+        printf("No");
+    return 0;
+}
