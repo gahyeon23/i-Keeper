@@ -1,0 +1,29 @@
+#include <stdio.h>
+int main() {
+    int i;
+    int a[8];
+	for (i = 0; i < 8; i++) {
+		scanf("%d", &a[i]); //변수 입력받기
+    }
+	int num = a[0]; //숫자 판별하기
+	if (num == 1) { //순서대로 입력된지 확인하기 , 만약 1부터 입력된다면
+		for (i = 1; i < 8; i++) {   
+			num++;                         // 순서대로 증가하는지 확인하기
+			if (a[i] != num) { break; }    // 순서대로 증가 안 하면 중단시키기
+			if (i == 7) {                 
+				printf("ascending\n");	return 0;
+			}
+		}
+	}
+	else if (num == 8) {
+		for (i = 1; i < 8; i++) {
+			num--;
+			if (a[i] != num) { break; }
+			if (i == 7) {
+				printf("descending\n");	return 0;
+			}
+		}
+	}
+	printf("mixed\n");
+    return 0;
+}
