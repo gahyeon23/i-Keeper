@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <string.h>
+int main(){
+    char n[80];
+    int ns;
+    int i,j,sum,s,c; //sum O 합계 s 점수 c 몇번 입력했는지
+    scanf("%d",&c);
+    for(i=0;i<c;i++){
+        sum=0;
+        s=1;
+        scanf("%s",n);
+        ns=strlen(n);
+        for(j=0;j<ns;j++){
+            if (n[j] == 'O'){
+                sum+=s;
+                s++;
+            }
+            if (n[j] == 'X')
+                s=1;
+        }
+        printf("%d\n",sum);
+    }
+    return 0;
+}
