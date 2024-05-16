@@ -1,0 +1,20 @@
+#include <stdio.h>
+int main(){
+    int N;
+    int i,j,max,min;
+    scanf("%d",&N);
+    int a[N];                //N이 4라면 a[3]까지 생성
+    for(i=0;i<N;i++){        //i는 3번 반복
+        scanf("%d",&a[i]);    //a[0]부터 a[2]까지 넣기
+    }
+    max=a[0];
+    min=a[0];
+    for(j=0;j<N;j++){
+        if (max<a[j])
+            max=a[j];
+        if (min>a[j])
+            min=a[j];
+    }
+    printf("%d %d",min,max);
+    return 0;
+}
